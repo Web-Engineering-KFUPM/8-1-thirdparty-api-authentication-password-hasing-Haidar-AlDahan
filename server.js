@@ -276,7 +276,8 @@ app.post("/login", async (req, res) => {
     if (!email || !password) {
       return res.status(400).json({ error: "Email and password are required" });
     }
-
+    
+    
     const user = users.find((u) => u.email === email);
     if (!user) {
       return res.status(400).json({ error: "User not found" });
